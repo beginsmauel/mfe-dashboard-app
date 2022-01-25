@@ -32,9 +32,9 @@ jobs:
       - uses: docker/build-push-action@v2
         name: Build & push Docker image for Dashboard
         with:
-          context: ./dashboard/
+          context: ./
           tags:  ${{ secrets.DOCKER_USERNAME }}/mf-dashboard-app:latest
           push: true
-          file: ./dashboard/Dockerfile
+          file: ./Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
